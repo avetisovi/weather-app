@@ -1,12 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Weather</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;1,500;1,700&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
-  
+  <aside class="current__weather">
+    <button class="leftside-menu__open">Search for places</button>
+    <div class="leftside-menu">
+      <button class="leftside-menu__close"></button>
+      <form class="leftside-menu__form">
+        <label>
+          <input type="text" class="leftside-menu__input" placeholder="search location">
+        </label>
+        <button class="leftside-menu__btn">Search</button>
+      </form>
+    </div>
+    <button class="map__btn">
+      <img src="assets/images/crosshair.svg" alt="">
+    </button>
+    <div class="current__weather-image">
+      <img src="assets/images/Shower.png" alt="">
+    </div>
+    <h2 class="current__weather-temperature">
+      15
+      <span class="current__weather-temperature--type">℃</span>
+    </h2>
+    <h3 class="current__weather-weather">Shower</h3>
+    <time class="current__weather-time">
+      <span>Today • </span><span class="current__date">Fri, 5 Jun</span>
+    </time>
+    <a class="current__weather-location">
+      <img src="assets/images/pin.svg" alt="">
+      <span>Helsinki</span>
+    </a>
+  </aside>
+  <main class="full__weather">
+    <form class="termperature-types">
+      <label>
+        <input type="radio" name="options" class="temerature-type">
+        <span>A</span>
+      </label>
+      <br />
+      <label>
+        <input type="radio" name="options" class="temerature-type">
+        <span>B</span>
+      </label>
+    </form>
+    <ul class="following__days">
+      <li class="following__day">
+        <h5 class="following__day-title">Tomorrow</h5>
+        <img src="assets/images/Snow.png" class="following__day-img">
+        <span class="following__day-temperature">16°C</span>
+        <span class="following__nigh-temperature">11°C</span>
+      </li>
+      <li class="following__day">
+        <h5 class="following__day-title">Sun, 7 Jun</h5>
+        <img src="assets/images/Snow.png" class="following__day-img">
+        <span class="following__day-temperature">16°C</span>
+        <span class="following__nigh-temperature">11°C</span>
+      </li>
+      <li class="following__day">
+        <h5 class="following__day-title">Mon, 8 Jun</h5>
+        <img src="assets/images/Thunderstorm.png" class="following__day-img">
+        <span class="following__day-temperature">16°C</span>
+        <span class="following__nigh-temperature">11°C</span>
+      </li>
+      <li class="following__day">
+        <h5 class="following__day-title">Tue, 9 Jun</h5>
+        <img src="assets/images/LightCloud.png" class="following__day-img">
+        <span class="following__day-temperature">16°C</span>
+        <span class="following__nigh-temperature">11°C</span>
+      </li>
+      <li class="following__day">
+        <h5 class="following__day-title">Wed, 10 Jun</h5>
+        <img src="assets/images/LightRain.png" class="following__day-img">
+        <span class="following__day-temperature">16°C</span>
+        <span class="following__nigh-temperature">11°C</span>
+      </li>
+    </ul>
+    <div class="higlights">
+      <h3 class="hightlights__title">Today's Hightlights</h3>
+      <ul class="hightlights__list">
+        <li class="hightlights__item">
+          <h4 class="hightlights__item-title">Wind status</h4>
+          <div class="highlights__item-text">
+            <span class="number">7</span>
+            <span class="text">mph</span>
+          </div>
+          <div class="wind__direction">
+            <div class="wind__direction-img">
+              <img src="assets/images/compass.svg" alt="">
+            </div>
+            <p class="wind__direction-text">WSW</p>
+          </div>
+        </li>
+        <li class="hightlights__item">
+          <h4 class="hightlights__item-title">Humidity</h4>
+          <div class="highlights__item-text">
+            <span class="number">84</span>
+            <span class="text">%</span>
+          </div>
+          <div class="humidity__progressbar">
+            <div class="humidity__numbers">
+              <div class="humidity__number">0</div>
+              <div class="humidity__number">50</div>
+              <div class="humidity__number">100</div>
+            </div>
+            <div class="humidity__progressbar-border">
+              <div class="humidity__progressbar-complete"></div>
+            </div>
+            <div class="humidity__percent">%</div>
+          </div>
+        </li>
+        <li class="hightlights__item">
+          <h4 class="hightlights__item-title">Visibility</h4>
+          <div class="highlights__item-text">
+            <span class="number">6,4</span>
+            <span class="text">miles</span>
+          </div>
+        </li>
+        <li class="hightlights__item">
+          <h4 class="hightlights__item-title">Air Pressure</h4>
+          <div class="highlights__item-text">
+            <span class="number">998</span>
+            <span class="text">mb</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
 </body>
+
 </html>
