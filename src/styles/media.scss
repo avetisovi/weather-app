@@ -1,0 +1,47 @@
+@media (max-width: 1500px) {
+  .following__days {
+    flex-wrap: wrap;
+    gap: 26px;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 1400px) {
+  .hightlights__list {
+    gap: 30px;
+  }
+  .following__days-item {
+    width: 130px;
+  }
+}
+
+@media (max-width: 1156px) {
+  .full__weather {
+    padding: 20px;
+  }
+  .following__days {
+    padding: 35px;
+  }
+  .current__weather {
+    width: 375px;
+  }
+}
+
+@media (max-width: 1054px) {
+  .following__days-item {
+    width: 120px;
+  }
+  .hightlights__list {
+    grid-template-columns: 320px;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    display: block;
+  }
+  .current__weather,
+  .full__weather {
+    width: 100%;
+  }
+}
