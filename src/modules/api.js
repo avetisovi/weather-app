@@ -20,7 +20,7 @@ async function getLocation() {
     weatherData.units = 'imperial';
   }
 
-  const nameResponse = await fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${locationData.latitude}&lon=${locationData.longitude}&limit=1&appid=92868b7e928def68f77bb8e0423a850c`);
+  const nameResponse = await fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${locationData.latitude}&lon=${locationData.longitude}&limit=1&appid=92868b7e928def68f77bb8e0423a850c`);
   const name = await nameResponse.json();
   weatherData.name = await name[0].name;
   localStorage.setItem('city', await name[0].name);
@@ -56,7 +56,7 @@ async function getCityData(city) {
       data.units = 'imperial';
     }
 
-    const nameResponse = await fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${cords.lat}&lon=${cords.lon}&limit=1&appid=92868b7e928def68f77bb8e0423a850c`);
+    const nameResponse = await fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${cords.lat}&lon=${cords.lon}&limit=1&appid=92868b7e928def68f77bb8e0423a850c`);
     const name = await nameResponse.json();
     data.name = await name[0].name;
 
