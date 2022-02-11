@@ -31,7 +31,7 @@ async function getLocation() {
 // eslint-disable-next-line consistent-return
 async function cityToCords(city) {
   try {
-    const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=92868b7e928def68f77bb8e0423a850c`);
+    const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=92868b7e928def68f77bb8e0423a850c`);
     const data = await response.json();
     return data[0];
   } catch (err) {
