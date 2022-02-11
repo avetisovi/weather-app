@@ -47,13 +47,13 @@ body {
     line-height: 169px;
     color: #e7e7eb;
     font-weight: 500;
-    span {
-      font-size: 48px;
-      line-height: 56px;
-      color: #a09fb1;
-      position: relative;
-      left: -35px;
-    }
+  }
+  &-temperature--type {
+    font-size: 48px;
+    line-height: 56px;
+    color: #a09fb1;
+    position: relative;
+    left: -35px;
   }
   &-weather {
     margin: 0 0 85px;
@@ -75,9 +75,13 @@ body {
     font-size: 18px;
     line-height: 21px;
     color: #88869d;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
     img {
-      width: 14px;
-      height: 20px;
+      width: 31px;
+      height: 31px;
     }
   }
 }
@@ -106,11 +110,11 @@ body {
   top: 0;
   bottom: 0;
   width: 100%;
-  background: #1E213A;
+  background: #1e213a;
   z-index: 2;
   padding: 20px 45px;
   text-align: right;
-  transition: transform .5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   &__open {
     border: 0;
     background: #6e707a;
@@ -131,6 +135,7 @@ body {
     background: transparent;
     text-align: right;
     margin-bottom: 45px;
+    cursor: pointer;
   }
   &__form {
     display: flex;
@@ -141,13 +146,13 @@ body {
     width: 100%;
     position: relative;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 15px;
       top: 0;
       bottom: 0;
       width: 17px;
-      background: url('@images/loupe.svg') center / contain no-repeat;
+      background: url("@images/loupe.svg") center / contain no-repeat;
     }
   }
   &__input {
@@ -155,8 +160,8 @@ body {
     width: 100%;
     height: 48px;
     background: transparent;
-    border: 1px solid #E7E7EB;
-    color: #E7E7EB;
+    border: 1px solid #e7e7eb;
+    color: #e7e7eb;
     &::placeholder {
       font-weight: 500;
     }
@@ -164,12 +169,12 @@ body {
   &__btn {
     width: 86px;
     height: 48px;
-    color: #E7E7EB;
+    color: #e7e7eb;
     font-weight: 600;
-    background: #3C47E9;
+    background: #3c47e9;
     border: 0;
     cursor: pointer;
-    transition: background .2s ease-in-out;
+    transition: background 0.2s ease-in-out;
     &:hover {
       background: #252eb8;
     }
@@ -224,7 +229,7 @@ body {
 .following__days {
   display: flex;
   justify-content: space-between;
-  gap: 2.50%;
+  gap: 2.5%;
   list-style: none;
   padding: 0;
   margin: 0 0 72px;
@@ -354,7 +359,6 @@ body {
   }
   &__progressbar-complete {
     background: #ffec65;
-    width: 80%;
     height: 8px;
     border-radius: 5px;
   }

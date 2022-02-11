@@ -25,76 +25,106 @@
         <label>
           <input type="text" class="leftside-menu__input" placeholder="search location">
         </label>
-        <button class="leftside-menu__btn">Search</button>
+        <button class="leftside-menu__btn" type="button">Search</button>
       </form>
     </div>
     <div class="current__weather-image">
-      <img src="assets/images/Shower.png" alt="">
+      <img>
     </div>
     <h2 class="current__weather-temperature">
-      15
-      <span class="current__weather-temperature--type">°C</span>
+      <span class="current__weather-temperature--text"></span>
+      <span class="current__weather-temperature--type"></span>
     </h2>
-    <h3 class="current__weather-weather">Shower</h3>
+    <h3 class="current__weather-weather"></h3>
     <time class="current__weather-time">
-      <span>Today • </span><span class="current__date">Fri, 5 Jun</span>
+      <span>Today • </span><span class="current__date"></span>
     </time>
     <a class="current__weather-location">
       <img src="assets/images/pin.svg" alt="">
-      <span>Helsinki</span>
+      <span class="current__city"></span>
     </a>
   </aside>
   <main class="full__weather">
     <form class="temperature__types">
       <label>
-        <input type="radio" name="temperature-options" class="temperature__types-item">
+        <input type="radio" name="temperature-options" class="temperature__types-item metric" checked>
         <span class="temperature__types-text">°C</span>
       </label>
       <br />
       <label>
-        <input type="radio" name="temperature-options" class="temperature__types-item">
+        <input type="radio" name="temperature-options" class="temperature__types-item imperial">
         <span class="temperature__types-text">°F</span>
       </label>
     </form>
     <ul class="following__days">
       <li class="following__days-item">
-        <h5 class="following__days-title">Tomorrow</h5>
-        <img src="assets/images/Snow.png" class="following__days-img">
+        <h5 class="following__days-title"></h5>
+        <img class="following__days-img">
         <div class="following__days-temperature">
-          <span class="following__day-temperature">16°C</span>
-          <span class="following__night-temperature">11°C</span>
+          <span class="following__day-temperature">
+            <span class="following__day-temperature-number"></span>
+            <span class="following__day-temperature-type"></span>
+          </span>
+          <span class="following__night-temperature">
+            <span class="following__night-temperature-number"></span>
+            <span class="following__day-temperature-type"></span>
+          </span>
         </div>
       </li>
       <li class="following__days-item">
-        <h5 class="following__days-title">Sun, 7 Jun</h5>
-        <img src="assets/images/Snow.png" class="following__days-img">
+        <h5 class="following__days-title"></h5>
+        <img class="following__days-img">
         <div class="following__days-temperature">
-          <span class="following__day-temperature">16°C</span>
-          <span class="following__night-temperature">11°C</span>
+          <span class="following__day-temperature">
+            <span class="following__day-temperature-number"></span>
+            <span class="following__day-temperature-type"></span>
+          </span>
+          <span class="following__night-temperature">
+            <span class="following__night-temperature-number"></span>
+            <span class="following__day-temperature-type"></span>
+          </span>
         </div>
       </li>
       <li class="following__days-item">
-        <h5 class="following__days-title">Mon, 8 Jun</h5>
-        <img src="assets/images/Thunderstorm.png" class="following__days-img">
+        <h5 class="following__days-title"></h5>
+        <img class="following__days-img">
         <div class="following__days-temperature">
-          <span class="following__day-temperature">16°C</span>
-          <span class="following__night-temperature">11°C</span>
+          <span class="following__day-temperature">
+            <span class="following__day-temperature-number"></span>
+            <span class="following__day-temperature-type"></span>
+          </span>
+          <span class="following__night-temperature">
+            <span class="following__night-temperature-number"></span>
+            <span class="following__day-temperature-type"></span>
+          </span>
         </div>
       </li>
       <li class="following__days-item">
-        <h5 class="following__days-title">Tue, 9 Jun</h5>
-        <img src="assets/images/LightCloud.png" class="following__days-img">
+        <h5 class="following__days-title"></h5>
+        <img class="following__days-img">
         <div class="following__days-temperature">
-          <span class="following__day-temperature">16°C</span>
-          <span class="following__night-temperature">11°C</span>
+          <span class="following__day-temperature">
+            <span class="following__day-temperature-number"></span>
+            <span class="following__day-temperature-type"></span>
+          </span>
+          <span class="following__night-temperature">
+            <span class="following__night-temperature-number"></span>
+            <span class="following__day-temperature-type"></span>
+          </span>
         </div>
       </li>
       <li class="following__days-item">
-        <h5 class="following__days-title">Wed, 10 Jun</h5>
-        <img src="assets/images/LightRain.png" class="following__days-img">
+        <h5 class="following__days-title"></h5>
+        <img class="following__days-img">
         <div class="following__days-temperature">
-          <span class="following__day-temperature">16°C</span>
-          <span class="following__night-temperature">11°C</span>
+          <span class="following__day-temperature">
+            <span class="following__day-temperature-number"></span>
+            <span class="following__day-temperature-type"></span>
+          </span>
+          <span class="following__night-temperature">
+            <span class="following__night-temperature-number"></span>
+            <span class="following__day-temperature-type"></span>
+          </span>
         </div>
       </li>
     </ul>
@@ -105,20 +135,20 @@
           <li class="hightlights__item">
             <h4 class="hightlights__item-title">Wind status</h4>
             <div class="hightlights__item-text">
-              <span class="number">7</span>
-              <span class="text">mph</span>
+              <span class="number wind-speed"></span>
+              <span class="text wind-unit"></span>
             </div>
             <div class="wind__direction">
               <div class="wind__direction-img">
-                <img src="assets/images/compass.svg" alt="">
+                <img src="assets/images/compass.svg">
               </div>
-              <p class="wind__direction-text">WSW</p>
+              <p class="wind__direction-text"></p>
             </div>
           </li>
           <li class="hightlights__item">
             <h4 class="hightlights__item-title">Humidity</h4>
             <div class="hightlights__item-text">
-              <span class="number">84</span>
+              <span class="number humidity-number"></span>
               <span class="text">%</span>
             </div>
             <div class="humidity__progressbar">
@@ -136,14 +166,14 @@
           <li class="hightlights__item">
             <h4 class="hightlights__item-title">Visibility</h4>
             <div class="hightlights__item-text">
-              <span class="number">6,4</span>
-              <span class="text">miles</span>
+              <span class="number visibility"></span>
+              <span class="text visibility-unit"></span>
             </div>
           </li>
           <li class="hightlights__item">
             <h4 class="hightlights__item-title">Air Pressure</h4>
             <div class="hightlights__item-text">
-              <span class="number">998</span>
+              <span class="number pressure"></span>
               <span class="text">mb</span>
             </div>
           </li>
