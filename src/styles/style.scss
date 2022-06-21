@@ -114,7 +114,7 @@ body {
   z-index: 2;
   padding: 20px 45px;
   text-align: right;
-  transition: transform 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   &__open {
     border: 0;
     background: #6e707a;
@@ -181,6 +181,7 @@ body {
   }
   &--closed {
     transform: translateX(-500%);
+    visibility: hidden;
   }
 }
 

@@ -9,6 +9,7 @@ import heavyRain from '@images/HeavyRain.png';
 import sleet from '@images/Sleet.png';
 import snow from '@images/Snow.png';
 
+// set weather image depending on weather type
 function weatherType(obj) {
   // eslint-disable-next-line default-case
   switch (obj.weather[0].description) {
@@ -50,6 +51,7 @@ function weatherType(obj) {
   }
 }
 
+// formating js dates to human readable versions
 function formatDates() {
   const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -78,6 +80,7 @@ function formatDates() {
   return [today, tommorow, twoDayAf, threeDayAf, fourDayAf, fiveDayAf];
 }
 
+// setting angle for wind direction
 function degToCompass(num) {
   const val = Math.floor((num / 22.5) + 0.5);
   const arr = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'];

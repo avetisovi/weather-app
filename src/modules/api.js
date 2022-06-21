@@ -1,8 +1,9 @@
 // eslint-disable-next-line import/no-cycle
-import { addWeatherToPage } from './dom';
+import addWeatherToPage from './dom';
 
 const c = document.querySelector('.metric');
 
+// get user's location with it's IP adress
 async function getLocation() {
   const locationResponse = await fetch('https://ipgeolocation.abstractapi.com/v1/?api_key=d9893f953afc47d1ab30975d389d8825');
   const locationData = await locationResponse.json();
@@ -29,7 +30,7 @@ async function getLocation() {
 }
 
 // eslint-disable-next-line consistent-return
-async function cityToCords(city) {
+async function cityNameToCords(city) {
   try {
     const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=92868b7e928def68f77bb8e0423a850c`);
     const data = await response.json();
@@ -42,7 +43,7 @@ async function cityToCords(city) {
 
 async function getCityData(city) {
   try {
-    const cords = await cityToCords(city);
+    const cords = await cityNameToCords(city);
 
     let response;
     let data;

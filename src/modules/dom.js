@@ -6,7 +6,8 @@ const openLeftsideMenu = document.querySelector('.leftside-menu__open');
 const closeLeftsideMenu = document.querySelector('.leftside-menu__close');
 const lefsideMenu = document.querySelector('.leftside-menu');
 const leftsideMenuInput = document.querySelector('.leftside-menu__input');
-const leftsideMenuButton = document.querySelector('.leftside-menu__btn');
+const leftsideMenuForm = document.querySelector('.leftside-menu__form');
+
 const locationBtn = document.querySelector('.map__btn');
 const currentWeatherImg = document.querySelector('.current__weather-image').querySelector('img');
 const currentWeatherTemperature = document.querySelector('.current__weather-temperature--text');
@@ -30,33 +31,27 @@ const followingDaysTemperatureType = document.querySelectorAll('.following__day-
 const windUnit = document.querySelector('.wind-unit');
 const visibilityUnit = document.querySelector('.visibility-unit');
 
-function toggleMenu() {
-  openLeftsideMenu.addEventListener('click', () => {
-    lefsideMenu.classList.remove('leftside-menu--closed');
-  });
+// toggle leftside menu
+openLeftsideMenu.addEventListener('click', () => {
+  lefsideMenu.classList.remove('leftside-menu--closed');
+});
 
-  closeLeftsideMenu.addEventListener('click', () => {
-    lefsideMenu.classList.add('leftside-menu--closed');
-  });
-}
+closeLeftsideMenu.addEventListener('click', () => {
+  lefsideMenu.classList.add('leftside-menu--closed');
+});
 
-function selectCity() {
-  leftsideMenuButton.addEventListener('click', () => {
-    getCityData(leftsideMenuInput.value);
-    localStorage.setItem('city', leftsideMenuInput.value);
-    lefsideMenu.classList.add('leftside-menu--closed');
-  });
-}
+// serach for entered city in leftside menu
+leftsideMenuForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  getCityData(leftsideMenuInput.value);
+  localStorage.setItem('city', leftsideMenuInput.value);
+  lefsideMenu.classList.add('leftside-menu--closed');
+});
 
-function currentLocation() {
-  locationBtn.addEventListener('click', () => {
-    getLocation();
-  });
-}
+locationBtn.addEventListener('click', getLocation);
 
 function addWeatherToPage(data) {
   // current weather
-
   currentWeatherImg.src = weatherType(data.current);
   currentWeatherImg.title = data.current.weather[0].description;
   currentWeatherImg.alt = data.current.weather[0].description;
@@ -67,7 +62,6 @@ function addWeatherToPage(data) {
   currentCityLocation.href = `https://maps.google.com/?q=${data.lat},${data.lon}`;
 
   // following days
-
   followingDaysDates.forEach((elem, i) => {
     elem.innerText = formatDates()[i + 1];
   });
@@ -97,7 +91,6 @@ function addWeatherToPage(data) {
   pressure.innerText = data.current.pressure;
 
   // units
-
   if (data.units === 'metric') {
     currentWeatherTemperatureType.innerText = '°C';
     // eslint-disable-next-line no-return-assign
@@ -115,6 +108,4 @@ function addWeatherToPage(data) {
   }
 }
 
-export {
-  toggleMenu, selectCity, currentLocation, addWeatherToPage,
-};
+export default addWeatherToPage;
