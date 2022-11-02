@@ -1,6 +1,6 @@
 # Weather App
 
-### [Live Demo](https://tolikatolika123.github.io/weather-app/)
+### [Live Demo](https://avetisovi.github.io/weather-app/)
 
 Educational project built using webpack\
 weather data is taken from [OpenWeather](https://openweathermap.org/api)\
